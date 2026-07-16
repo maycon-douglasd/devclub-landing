@@ -1,0 +1,32 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #3B82F6;
+  --color-secondary: #8B5CF6;
+
+  /* Background */
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+
+  /* Text */
+  --color-text: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+
+  /* Border */
+  --color-border: #334155;
+
+  /* Gradient */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #3B82F6,
+    #8B5CF6
+  );
+
+  /* Shadow */
+  --shadow-primary: 0 10px 30px rgba(59,130,246,.15);
+
+  /* Radius */
+  --radius: 12px;
+
+  /* Transition */
+  --transition: .3s ease;
+}
