@@ -1,3 +1,73 @@
+/* ==========================================================
+   MANIFESTO
+========================================================== */
+
 .manifesto {
+    padding: 140px 20px;
+    background: var(--color-background);
+}
+
+.manifesto .container {
+    width: min(100%, var(--layout-max-width));
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.manifesto-badge {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: .55rem 1.1rem;
+
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+
+    color: var(--color-primary);
+    background: rgba(0, 232, 90, .12);
+    border: 1px solid rgba(0, 232, 90, .35);
+    border-radius: 999px;
+}
+
+.manifesto-title {
+    max-width: 700px;
+    margin: 0 auto;
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+
+    color: var(--color-text);
+}
+
+.manifesto-description {
+    max-width: 650px;
+    margin: 48px auto 0;
+
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 2;
+
+    color: var(--color-text-secondary);
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .manifesto {
+        padding: 100px 24px;
+    }
+
+    .manifesto-title {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .manifesto-description {
+        margin-top: 36px;
+        line-height: 1.9;
+    }
 
 }

@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar__container">
-                <h2 className="navbar__logo">ASCEND</h2>
+                <h2 className="navbar__logo">DevClub</h2>
 
                 <ul className="navbar__menu">
                     <li><a href="#">Início</a></li>

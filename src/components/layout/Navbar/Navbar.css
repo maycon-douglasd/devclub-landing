@@ -1,3 +1,7 @@
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
 .navbar {
     width: 100%;
     padding: 24px 0;
@@ -5,7 +9,7 @@
 }
 
 .navbar__container {
-    width: min(1200px, 90%);
+    width: min(var(--layout-max-width), 90%);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -16,14 +20,14 @@
     margin: 0;
     font-size: 2rem;
     font-weight: 800;
-    color: #FFFFFF;
+    color: var(--color-text);
     letter-spacing: -.5px;
     cursor: pointer;
-    transition: color .25s ease;
+    transition: color var(--transition-default);
 }
 
 .navbar__logo:hover {
-    color: #8B7CFF;
+    color: var(--color-primary);
 }
 
 .navbar__menu {
@@ -40,9 +44,9 @@
     text-decoration: none;
     font-size: .95rem;
     font-weight: 500;
-    color: #B6C0D4;
+    color: var(--color-text-secondary);
     cursor: pointer;
-    transition: color .25s ease;
+    transition: color var(--transition-default);
 }
 
 .navbar__menu a::after {
@@ -52,12 +56,12 @@
     bottom: -6px;
     width: 0;
     height: 2px;
-    background: #6C63FF;
-    transition: width .25s ease;
+    background: var(--gradient-primary);
+    transition: width var(--transition-default);
 }
 
 .navbar__menu a:hover {
-    color: #FFFFFF;
+    color: var(--color-text);
 }
 
 .navbar__menu a:hover::after {
@@ -71,18 +75,18 @@
     height: 52px;
     padding: 0 28px;
     border: none;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
-    color: #FFFFFF;
+    border-radius: var(--radius-md);
+    background: var(--gradient-primary);
+    color: var(--color-background);
     font-size: .95rem;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 10px 24px rgba(108, 99, 255, .25);
-    transition: transform .25s ease,
-                box-shadow .25s ease;
+    box-shadow: var(--shadow-primary);
+    transition: transform var(--transition-default),
+                box-shadow var(--transition-default);
 }
 
 .navbar__button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(108, 99, 255, .35);
+    box-shadow: 0 18px 40px rgba(0, 232, 90, .28);
 }

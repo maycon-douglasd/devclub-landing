@@ -3,15 +3,30 @@
 }
 
 .about__container {
-    width: min(90%, 1200px);
+    width: min(90%, var(--layout-max-width));
     margin: 0 auto;
-}
-
-.about__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+    position: relative;
+}
+
+.about__container::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(0, 232, 90, .12) 0%,
+            rgba(0, 232, 90, .04) 45%,
+            transparent 75%);
+    filter: blur(40px);
+    pointer-events: none;
 }
 
 .about__content,
@@ -19,31 +34,71 @@
     flex: 1;
 }
 
+/* ===========================
+   TEXTO
+=========================== */
+
 .about__badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #eaf3ff;
-    color: #2563eb;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem 1.1rem;
+    background: rgba(0, 232, 90, .12);
+    border: 1px solid rgba(0, 232, 90, .35);
     border-radius: 999px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.about__badge::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    box-shadow:
+        0 0 10px var(--color-primary),
+        0 0 20px var(--color-secondary);
 }
 
 .about__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #f8fafc;
-    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    max-width: 600px;
 }
 
 .about__description {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: #64748b;
     max-width: 600px;
+    color: var(--color-text-secondary);
 }
+
+.about__description p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+}
+
+.about__highlight {
+    margin: 2rem 0;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.about__highlight strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* ===========================
+   CARD
+=========================== */
 
 .about__illustration {
     display: flex;
@@ -55,18 +110,31 @@
 .about__card {
     width: 100%;
     max-width: 420px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 24px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
     padding: 2rem;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-    transition: transform .3s ease,
-        box-shadow .3s ease;
+    box-shadow: var(--shadow-primary);
+    transition:
+        transform var(--transition-default),
+        box-shadow var(--transition-default);
+    position: relative;
+    overflow: hidden;
+}
+
+.about__card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 232, 90, .08),
+            transparent 35%);
+    pointer-events: none;
 }
 
 .about__card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 28px 50px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 24px 45px rgba(0, 232, 90, .22);
 }
 
 .about__card-header {
@@ -75,35 +143,75 @@
 
 .about__card-badge {
     display: inline-block;
-    padding: 0.35rem 0.8rem;
-    background-color: #eaf3ff;
-    color: #2563eb;
+    padding: .35rem .8rem;
+    background: rgba(0, 232, 90, .12);
+    color: var(--color-primary);
     border-radius: 999px;
-    font-size: 0.75rem;
+    font-size: .75rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    letter-spacing: .12em;
+    box-shadow: 0 0 15px rgba(0, 232, 90, .18);
 }
 
 .about__card-title {
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.4;
-    color: #1e293b;
+    color: var(--color-text);
 }
+
+/* ===========================
+   PROGRESSO GERAL
+=========================== */
+
+.about__overall-progress {
+    margin-bottom: 2rem;
+}
+
+.about__overall-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .75rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.about__progress-bar {
+    width: 100%;
+    height: 10px;
+    background: var(--color-border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.about__progress-fill {
+    width: 68%;
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 999px;
+}
+
+/* ===========================
+   LISTA DE TECNOLOGIAS
+=========================== */
 
 .about__progress-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--color-border);
     cursor: pointer;
-    transition: background-color .25s ease,
-        padding .25s ease;
+    transition:
+        background-color var(--transition-default),
+        padding var(--transition-default);
 }
 
 .about__progress-item:hover {
-    background: #f8fafc;
+    background: rgba(255, 255, 255, .03);
     padding-left: .75rem;
     padding-right: .75rem;
 }
@@ -112,10 +220,9 @@
     display: flex;
     align-items: center;
     gap: .45rem;
-
     font-size: .95rem;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--color-text);
 }
 
 .about__tech-icon {
@@ -143,58 +250,84 @@
     color: #339933;
 }
 
+/* ===========================
+   STATUS
+=========================== */
+
 .about__progress-status {
-    padding: 0.3rem 0.7rem;
+    padding: .3rem .7rem;
     border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: .8rem;
     font-weight: 600;
 }
 
 .about__progress-status--completed {
-    background: #dcfce7;
-    color: #15803d;
+    background: rgba(0, 232, 90, .15);
+    color: var(--color-primary);
 }
 
 .about__progress-status--progress {
-    background: #dbeafe;
-    color: #2563eb;
+    background: rgba(25, 255, 114, .15);
+    color: var(--color-secondary);
 }
 
 .about__progress-status--upcoming {
-    background: #fef3c7;
-    color: #b45309;
+    background: rgba(255, 255, 255, .08);
+    color: var(--color-text);
 }
 
 .about__progress-status--pending {
-    background: #e5e7eb;
-    color: #4b5563;
+    background: var(--color-border);
+    color: var(--color-text-secondary);
 }
 
-.about__overall-progress {
-    margin-bottom: 2rem;
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media (max-width: 992px) {
+
+    .about__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__title {
+        font-size: 2.5rem;
+    }
+
+    .about__description {
+        max-width: 100%;
+    }
+
+    .about__card {
+        margin-top: 2rem;
+    }
+
 }
 
-.about__overall-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: .75rem;
-    font-size: .9rem;
-    font-weight: 600;
-    color: #475569;
-}
+@media (max-width: 768px) {
 
-.about__progress-bar {
-    width: 100%;
-    height: 10px;
-    background: #e2e8f0;
-    border-radius: 999px;
-    overflow: hidden;
-}
+    .about {
+        padding: 5rem 0;
+    }
 
-.about__progress-fill {
-    width: 68%;
-    height: 100%;
-    background: linear-gradient(90deg, #2563eb, #3b82f6);
-    border-radius: 999px;
+    .about__title {
+        font-size: 2rem;
+    }
+
+    .about__description p {
+        font-size: 1rem;
+    }
+
+    .about__card {
+        padding: 1.5rem;
+    }
+
 }

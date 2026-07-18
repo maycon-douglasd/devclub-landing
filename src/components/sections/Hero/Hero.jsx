@@ -49,7 +49,7 @@ function Hero() {
                         <header className="dashboard__header">
 
                             <span className="dashboard__brand">
-                                🚀 ASCEND
+                                 DevClub
                             </span>
 
                         </header>

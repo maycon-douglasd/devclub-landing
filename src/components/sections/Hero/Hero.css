@@ -7,7 +7,8 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 80px 20px;
+    padding: 100px 20px 80px;
+    background: var(--color-background);
 }
 
 .hero__container {
@@ -37,7 +38,7 @@
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1.5px;
-    color: #FFFFFF;
+    color: var(--color-text);
 }
 
 .hero__description {
@@ -45,7 +46,7 @@
     margin-bottom: 44px;
     font-size: 1.125rem;
     line-height: 1.7;
-    color: #B6C0D4;
+    color: var(--color-text-secondary);
 }
 
 .hero__buttons {
@@ -73,9 +74,11 @@
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #2A3447;
-    border-radius: 18px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
     overflow: hidden;
+    box-shadow: var(--shadow-primary);
 }
 
 /* ==========================================================
@@ -88,32 +91,34 @@
     justify-content: center;
     height: 52px;
     padding: 0 28px;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     border: none;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all .25s ease;
+    transition: var(--transition-default);
 }
 
 .hero__button--primary {
-    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
-    color: #FFFFFF;
+    background: var(--gradient-primary);
+    color: var(--color-background);
 }
 
 .hero__button--primary:hover {
     transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
 }
 
 .hero__button--secondary {
     padding: 0 22px;
     background: transparent;
-    color: #FFFFFF;
-    border: 1px solid #3A4560;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
 }
 
 .hero__button--secondary:hover {
-    background: rgba(255,255,255,.05);
+    background: var(--color-surface);
+    border-color: var(--color-primary);
 }
 
 /* ==========================================================
@@ -125,7 +130,8 @@
     align-items: center;
     min-height: 70px;
     padding: 0 32px;
-    border-bottom: 1px solid #2A3447;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .dashboard__brand {
@@ -141,6 +147,7 @@
     display: flex;
     flex-direction: column;
     padding: 48px 32px 40px;
+    background: var(--color-surface);
 }
 
 .dashboard__label {
@@ -148,7 +155,7 @@
     margin-bottom: 10px;
     font-size: 0.9rem;
     font-weight: 500;
-    color: #8B94A7;
+    color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -158,7 +165,7 @@
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #FFFFFF;
+    color: var(--color-text);
 }
 
 .dashboard__progress {
@@ -171,13 +178,14 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 18px;
+    color: var(--color-primary);
 }
 
 .dashboard__progress-bar {
     width: 100%;
     height: 12px;
     border-radius: 999px;
-    background: #2A3447;
+    background: var(--color-border);
     overflow: hidden;
 }
 
@@ -185,7 +193,7 @@
     width: 72%;
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
+    background: var(--gradient-primary);
 }
 
 /* ==========================================================
@@ -204,13 +212,14 @@
     font-weight: 700;
     line-height: 1;
     margin-bottom: 18px;
+    color: var(--color-primary);
 }
 
 .dashboard__progress-bar {
     width: 100%;
     height: 12px;
     border-radius: 999px;
-    background: #2A3447;
+    background: var(--color-border);
     overflow: hidden;
 }
 
@@ -218,7 +227,7 @@
     width: 72%;
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
+    background: var(--gradient-primary);
 }
 
 /* ==========================================================
@@ -235,12 +244,12 @@
 .dashboard__module-label {
     font-size: 0.85rem;
     font-weight: 500;
-    color: #8B94A7;
+    color: var(--color-text-secondary);
 }
 
 .dashboard__module-name {
     font-size: 1.35rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--color-text);
     line-height: 1.3;
 }

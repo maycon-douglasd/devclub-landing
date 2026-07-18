@@ -3,27 +3,27 @@
   --layout-max-width: 1200px;
 
   /* Primary Colors */
-  --color-primary: #3B82F6;
-  --color-secondary: #8B5CF6;
+  --color-primary: #00E85A;
+  --color-secondary: #19FF72;
 
   /* Background */
-  --color-background: #0F172A;
-  --color-surface: #1E293B;
+  --color-background: #121212;
+  --color-surface: #1E1E1E;
 
   /* Text */
-  --color-text: #F8FAFC;
-  --color-text-secondary: #94A3B8;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #B8B8B8;
 
   /* Border */
-  --color-border: #334155;
+  --color-border: #2D2D2D;
 
   /* Gradient */
   --gradient-primary: linear-gradient(135deg,
-      #3B82F6,
-      #8B5CF6);
+      #00D957 0%,
+      #19FF72 100%);
 
   /* Shadow */
-  --shadow-primary: 0 10px 30px rgba(59, 130, 246, .15);
+  --shadow-primary: 0 15px 35px rgba(0, 232, 90, .18);
 
   /* Radius */
   --radius-sm: 8px;
@@ -32,5 +32,5 @@
 
   /* Transition */
   --transition-default: .3s ease;
-  
+
 }

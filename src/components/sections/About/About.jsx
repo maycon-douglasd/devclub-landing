@@ -1,10 +1,10 @@
 import "./About.css";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs
+    FaHtml5,
+    FaCss3Alt,
+    FaJs,
+    FaReact,
+    FaNodeJs
 } from "react-icons/fa";
 
 function About() {
@@ -16,25 +16,67 @@ function About() {
                 <div className="about__content">
 
                     <span className="about__badge">
-                        Nossa Missão
+                        CAPÍTULO 02
                     </span>
 
                     <h2 className="about__title">
-                        Transformando o aprendizado em uma jornada clara, organizada e motivadora.
+                        Ninguém evolui sozinho.
                     </h2>
 
-                    <p className="about__description">
-                        O ASCEND foi criado para ajudar estudantes e desenvolvedores a organizarem seus estudos de forma visual, acompanhando a evolução de cada etapa da jornada. Com uma interface intuitiva e foco na experiência do usuário, a plataforma incentiva a consistência e torna o aprendizado mais organizado e motivador.
-                    </p>
+                    <div className="about__description">
+
+                        <p>
+                            Todo desenvolvedor já esteve exatamente onde você está hoje.
+                        </p>
+
+                        <p>Com dúvidas.</p>
+
+                        <p>Com medo de errar.</p>
+
+                        <p>Com vontade de desistir.</p>
+
+                        <p>
+                            Mas também com o desejo de construir um futuro diferente.
+                        </p>
+
+                        <p className="about__highlight">
+                            É por isso que <strong>o DevClub existe.</strong>
+                        </p>
+
+                        <p>
+                            Para mostrar que você nunca precisou fazer essa jornada sozinho.
+                        </p>
+
+                        <p>
+                            Aqui, cada desafio se transforma em aprendizado.
+                        </p>
+
+                        <p>
+                            Cada conquista inspira a próxima.
+                        </p>
+
+                        <p>
+                            E cada passo aproxima você da carreira que sempre imaginou.
+                        </p>
+
+                    </div>
 
                 </div>
 
                 <div className="about__illustration">
-                    <div className="about__card">
-                        <div className="about__card-header">
-                            <span className="about__card-badge">ASCEND</span>
 
-                            <h3 className="about__card-title">Sua evolução em um só lugar</h3>
+                    <div className="about__card">
+
+                        <div className="about__card-header">
+
+                            <span className="about__card-badge">
+                                DevClub
+                            </span>
+
+                            <h3 className="about__card-title">
+                                Sua evolução em um só lugar
+                            </h3>
+
                         </div>
 
                         <div className="about__card-body">
@@ -56,7 +98,7 @@ function About() {
 
                                 <span className="about__progress-tech">
                                     <FaHtml5 className="about__tech-icon about__tech-icon--html" />
-<FaCss3Alt className="about__tech-icon about__tech-icon--css" />
+                                    <FaCss3Alt className="about__tech-icon about__tech-icon--css" />
                                     HTML & CSS
                                 </span>
 
@@ -106,7 +148,9 @@ function About() {
                             </div>
 
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
