@@ -1,0 +1,246 @@
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.hero__container {
+    width: 100%;
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+/* ==========================================================
+   COLUNA ESQUERDA
+========================================================== */
+
+.hero__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__title {
+    max-width: 640px;
+    margin-bottom: 28px;
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: #FFFFFF;
+}
+
+.hero__description {
+    max-width: 560px;
+    margin-bottom: 44px;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #B6C0D4;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* ==========================================================
+   MOCKUP
+========================================================== */
+
+.hero__mockup {
+    flex: 0 0 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================================
+   DASHBOARD
+========================================================== */
+
+.hero__dashboard {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #2A3447;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0 28px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.hero__button--primary {
+    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
+    color: #FFFFFF;
+}
+
+.hero__button--primary:hover {
+    transform: translateY(-2px);
+}
+
+.hero__button--secondary {
+    padding: 0 22px;
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #3A4560;
+}
+
+.hero__button--secondary:hover {
+    background: rgba(255,255,255,.05);
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.dashboard__header {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    padding: 0 32px;
+    border-bottom: 1px solid #2A3447;
+}
+
+.dashboard__brand {
+    display: inline-block;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.dashboard__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 32px 40px;
+}
+
+.dashboard__label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #8B94A7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dashboard__title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+.dashboard__progress {
+    margin: 28px 0;
+}
+
+.dashboard__progress-number {
+    display: block;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.dashboard__progress-bar {
+    width: 100%;
+    height: 12px;
+    border-radius: 999px;
+    background: #2A3447;
+    overflow: hidden;
+}
+
+.dashboard__progress-fill {
+    width: 72%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
+}
+
+/* ==========================================================
+   PROGRESSO
+========================================================== */
+
+.dashboard__progress {
+    margin: 28px 0 24px;
+    text-align: center;
+}
+
+.dashboard__progress-number {
+    display: block;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.dashboard__progress-bar {
+    width: 100%;
+    height: 12px;
+    border-radius: 999px;
+    background: #2A3447;
+    overflow: hidden;
+}
+
+.dashboard__progress-fill {
+    width: 72%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
+}
+
+/* ==========================================================
+   MÓDULO
+========================================================== */
+
+.dashboard__current-module {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.dashboard__module-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #8B94A7;
+}
+
+.dashboard__module-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.3;
+}

@@ -1,4 +1,7 @@
 :root {
+  /* Layout */
+  --layout-max-width: 1200px;
+
   /* Primary Colors */
   --color-primary: #3B82F6;
   --color-secondary: #8B5CF6;
@@ -15,18 +18,19 @@
   --color-border: #334155;
 
   /* Gradient */
-  --gradient-primary: linear-gradient(
-    135deg,
-    #3B82F6,
-    #8B5CF6
-  );
+  --gradient-primary: linear-gradient(135deg,
+      #3B82F6,
+      #8B5CF6);
 
   /* Shadow */
-  --shadow-primary: 0 10px 30px rgba(59,130,246,.15);
+  --shadow-primary: 0 10px 30px rgba(59, 130, 246, .15);
 
   /* Radius */
-  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
 
   /* Transition */
-  --transition: .3s ease;
+  --transition-default: .3s ease;
+  
 }

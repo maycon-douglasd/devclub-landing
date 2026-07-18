@@ -1,0 +1,200 @@
+.about {
+    padding: 6rem 0;
+}
+
+.about__container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+.about__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about__content,
+.about__illustration {
+    flex: 1;
+}
+
+.about__badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #eaf3ff;
+    color: #2563eb;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.about__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+}
+
+.about__description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #64748b;
+    max-width: 600px;
+}
+
+.about__illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.about__card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    transition: transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.about__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 50px rgba(15, 23, 42, 0.12);
+}
+
+.about__card-header {
+    margin-bottom: 2rem;
+}
+
+.about__card-badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    background-color: #eaf3ff;
+    color: #2563eb;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.about__card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1e293b;
+}
+
+.about__progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: background-color .25s ease,
+        padding .25s ease;
+}
+
+.about__progress-item:hover {
+    background: #f8fafc;
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+.about__progress-tech {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+
+    font-size: .95rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.about__tech-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.about__tech-icon--html {
+    color: #E34F26;
+}
+
+.about__tech-icon--css {
+    color: #1572B6;
+}
+
+.about__tech-icon--js {
+    color: #F7DF1E;
+}
+
+.about__tech-icon--react {
+    color: #61DAFB;
+}
+
+.about__tech-icon--node {
+    color: #339933;
+}
+
+.about__progress-status {
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.about__progress-status--completed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.about__progress-status--progress {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.about__progress-status--upcoming {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.about__progress-status--pending {
+    background: #e5e7eb;
+    color: #4b5563;
+}
+
+.about__overall-progress {
+    margin-bottom: 2rem;
+}
+
+.about__overall-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .75rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.about__progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.about__progress-fill {
+    width: 68%;
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    border-radius: 999px;
+}

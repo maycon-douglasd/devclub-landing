@@ -1,8 +1,13 @@
+import Hero from "../components/sections/Hero/Hero";
+import Manifesto from "../components/sections/Manifesto/Manifesto";
+import About from "../components/sections/About/About";
+
 function Home() {
   return (
     <main>
-      <h1>Project ASCEND</h1>
-      <p>Landing Page em desenvolvimento 🚀</p>
+      <Hero />
+      <Manifesto />
+      <About />
     </main>
   );
 }

@@ -1,47 +1,88 @@
 .navbar {
-    background-color: #111827;
-    padding: 20px;
+    width: 100%;
+    padding: 24px 0;
+    background: transparent;
 }
 
 .navbar__container {
-    width: 90%;
+    width: min(1200px, 90%);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar__menu {
-    display: flex;
-    list-style: none;
-    gap: 24px;
+.navbar__logo {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -.5px;
+    cursor: pointer;
+    transition: color .25s ease;
 }
 
-.navbar__logo {
-    font-size: 2rem;
-    font-weight: 700;
+.navbar__logo:hover {
+    color: #8B7CFF;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar__menu a {
+    position: relative;
     text-decoration: none;
-    color: var(--color-text);
-    transition: var(--transition);
+    font-size: .95rem;
+    font-weight: 500;
+    color: #B6C0D4;
+    cursor: pointer;
+    transition: color .25s ease;
+}
+
+.navbar__menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #6C63FF;
+    transition: width .25s ease;
 }
 
 .navbar__menu a:hover {
-    color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.navbar__menu a:hover::after {
+    width: 100%;
 }
 
 .navbar__button {
-    background-color: var(--color-primary);
-    color: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0 28px;
     border: none;
-    padding: 12px 24px;
-    border-radius: 10px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #6C63FF, #8B7CFF);
+    color: #FFFFFF;
+    font-size: .95rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    box-shadow: 0 10px 24px rgba(108, 99, 255, .25);
+    transition: transform .25s ease,
+                box-shadow .25s ease;
 }
 
 .navbar__button:hover {
-    background-color: var(--cor-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(108, 99, 255, .35);
 }
