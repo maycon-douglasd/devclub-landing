@@ -1,0 +1,176 @@
+.cta {
+  padding: 100px 20px 50px;
+  background: linear-gradient(
+    180deg,
+    #181818 0%,
+    #121212 100%
+  );
+}
+
+.cta .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================
+   Cabeçalho
+============================ */
+
+.cta .chapter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+  margin-bottom: 20px;
+
+  border-radius: 999px;
+
+  background: rgba(0, 232, 90, .12);
+  border: 1px solid rgba(0, 232, 90, .25);
+
+  color: #00e85a;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.cta .section-description {
+  max-width: 700px;
+  margin: 0 auto 45px;
+
+  color: #bdbdbd;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ============================
+   Botão
+============================ */
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 36px;
+
+  background: #00e85a;
+  color: #121212;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: .3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+}
+
+/* ============================
+   Footer
+============================ */
+
+.footer {
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid #2f2f2f;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-top h3 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.footer-top nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-top nav a {
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.footer-top nav a:hover {
+  color: #00e85a;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.footer-bottom p {
+  color: #8f8f8f;
+  font-size: .95rem;
+}
+
+/* ============================
+   Responsivo
+============================ */
+
+@media (max-width: 768px) {
+
+  .cta {
+    padding: 80px 20px 40px;
+  }
+
+  .cta h2 {
+    font-size: 2.3rem;
+  }
+
+  .cta .section-description {
+    font-size: 1rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-top nav {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .footer-top nav {
+    gap: 18px;
+  }
+
+}

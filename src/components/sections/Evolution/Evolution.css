@@ -1,0 +1,263 @@
+.evolution {
+  padding: 100px 20px;
+  background: #181818;
+}
+
+.evolution .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================
+   Cabeçalho
+============================ */
+
+.chapter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+  margin-bottom: 18px;
+
+  border-radius: 999px;
+
+  background: rgba(0, 232, 90, 0.12);
+  border: 1px solid rgba(0, 232, 90, 0.25);
+
+  color: #00e85a;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.section-tag {
+  display: block;
+  color: #00e85a;
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.evolution h2 {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  max-width: 720px;
+  color: #bdbdbd;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 60px;
+}
+
+/* ============================
+   Comunidade
+============================ */
+
+.community-card {
+  background: #1f1f1f;
+  border: 1px solid #2f2f2f;
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.community-card h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.community-card p {
+  color: #bdbdbd;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.community-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.item {
+  background: #262626;
+  border: 1px solid #343434;
+  border-radius: 12px;
+  padding: 18px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ============================
+   Empresas
+============================ */
+
+.companies-area {
+  margin-bottom: 70px;
+}
+
+.companies-area h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 35px;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.company-card {
+  height: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #1f1f1f;
+  border: 1px solid #2f2f2f;
+  border-radius: 16px;
+
+  transition: .3s;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  border-color: #00e85a;
+}
+
+.company-card img {
+  max-width: 140px;
+  max-height: 55px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ============================
+   Antes x Depois
+============================ */
+
+.transformation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.before,
+.after {
+  background: #1f1f1f;
+  border: 1px solid #2f2f2f;
+  border-radius: 18px;
+  padding: 35px;
+}
+
+.before h3,
+.after h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.before h3 {
+  color: #ff5c5c;
+}
+
+.after h3 {
+  color: #00e85a;
+}
+
+.before ul,
+.after ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.before li,
+.after li {
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+/* ============================
+   Responsivo
+============================ */
+
+@media (max-width: 992px) {
+
+  .community-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transformation {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .evolution {
+    padding: 80px 20px;
+  }
+
+  .evolution h2 {
+    font-size: 2.3rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .community-card {
+    padding: 30px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .community-items {
+    grid-template-columns: 1fr;
+  }
+
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-card {
+    height: 100px;
+  }
+
+  .company-card img {
+    max-width: 120px;
+    max-height: 45px;
+  }
+
+  .before,
+  .after {
+    padding: 25px;
+  }
+
+  .before h3,
+  .after h3 {
+    font-size: 1.7rem;
+  }
+
+}

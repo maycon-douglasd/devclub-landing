@@ -4,6 +4,10 @@ import About from "../components/sections/About/About";
 import Journey from "../components/sections/Journey/Journey";
 import Projects from "../components/sections/Projects/Projects";
 import Results from "../components/sections/Results/Results";
+import Tutors from "../components/sections/Tutors/Tutors";
+import Evolution from "../components/sections/Evolution/Evolution";
+import FAQ from "../components/sections/FAQ/FAQ";
+import CTA from "../components/sections/CTA/CTA";
 
 function Home() {
   return (
@@ -14,6 +18,10 @@ function Home() {
       <Journey />
       <Projects />
       <Results />
+      <Tutors />
+      <Evolution />
+      <FAQ />
+      <CTA />
     </>
   );
 }
