@@ -6,7 +6,6 @@ import Projects from "../components/sections/Projects/Projects";
 import Results from "../components/sections/Results/Results";
 import Tutors from "../components/sections/Tutors/Tutors";
 import Evolution from "../components/sections/Evolution/Evolution";
-import FAQ from "../components/sections/FAQ/FAQ";
 import CTA from "../components/sections/CTA/CTA";
 
 function Home() {
@@ -20,7 +19,6 @@ function Home() {
       <Results />
       <Tutors />
       <Evolution />
-      <FAQ />
       <CTA />
     </>
   );

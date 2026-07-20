@@ -1,24 +1,51 @@
-import './Navbar.css';
+import "./Navbar.css";
 
 function Navbar() {
     return (
         <nav className="navbar">
+
             <div className="navbar__container">
-                <h2 className="navbar__logo">DevClub</h2>
 
-                <ul className="navbar__menu">
-                    <li><a href="#">Início</a></li>
+                <a
+                    href="#hero"
+                    className="navbar__logo"
+                >
+                    DevClub
+                </a>
 
-                    <li><a href="#">Sobre</a></li>
+                <div className="navbar__navigation">
 
-                    <li><a href="#">Serviços</a></li>
+                    <ul className="navbar__menu">
 
-                    <li><a href="#">Contato</a></li>
-                </ul>
+                        <li>
+                            <a href="#hero">Início</a>
+                        </li>
 
-                <button className="navbar__button">Vamos Conversar
-                </button>
+                        <li>
+                            <a href="#about">Sobre</a>
+                        </li>
+
+                        <li>
+                            <a href="#projects">Projetos</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">Contato</a>
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="#cta"
+                        className="navbar__button"
+                    >
+                        Vamos Conversar
+                    </a>
+
+                </div>
+
             </div>
+
         </nav>
     );
 }

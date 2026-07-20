@@ -3,90 +3,206 @@
 ========================================================== */
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
     width: 100%;
-    padding: 24px 0;
-    background: transparent;
+
+    padding: 14px 0;
+
+    background: rgba(18, 18, 18, .75);
+
+    
+
+    border-bottom: 1px solid rgba(255,255,255,.05);
+
+    z-index: 1000;
+
+    transition:
+        background .30s ease,
+        padding .30s ease,
+        border-color .30s ease,
+        box-shadow .30s ease;
 }
 
 .navbar__container {
-    width: min(var(--layout-max-width), 90%);
+    width: min(var(--layout-max-width), 92%);
+
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* ==========================================================
+   LOGO
+========================================================== */
+
 .navbar__logo {
-    margin: 0;
+    text-decoration: none;
+
     font-size: 2rem;
     font-weight: 800;
+
+    letter-spacing: -.8px;
+
     color: var(--color-text);
-    letter-spacing: -.5px;
-    cursor: pointer;
-    transition: color var(--transition-default);
+
+    transition:
+        color .30s ease,
+        transform .30s ease;
 }
 
 .navbar__logo:hover {
     color: var(--color-primary);
+    transform: translateY(-1px);
 }
+
+/* ==========================================================
+   NAVEGAÇÃO
+========================================================== */
+
+.navbar__navigation {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
 
 .navbar__menu {
     display: flex;
     align-items: center;
-    gap: 40px;
-    list-style: none;
+
+    gap: 36px;
+
     margin: 0;
     padding: 0;
+
+    list-style: none;
 }
 
 .navbar__menu a {
     position: relative;
+
     text-decoration: none;
+
     font-size: .95rem;
     font-weight: 500;
-    color: var(--color-text-secondary);
-    cursor: pointer;
-    transition: color var(--transition-default);
-}
 
-.navbar__menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: var(--gradient-primary);
-    transition: width var(--transition-default);
+    color: var(--color-text-secondary);
+
+    transition:
+        color .30s ease;
 }
 
 .navbar__menu a:hover {
     color: var(--color-text);
 }
 
+.navbar__menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: var(--gradient-primary);
+
+    transition: width .30s ease;
+}
+
 .navbar__menu a:hover::after {
     width: 100%;
 }
+
+/* ==========================================================
+   BOTÃO
+========================================================== */
 
 .navbar__button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    min-width: 180px;
     height: 52px;
+
     padding: 0 28px;
+
+    text-decoration: none;
+    white-space: nowrap;
+
     border: none;
     border-radius: var(--radius-md);
+
     background: var(--gradient-primary);
+
     color: var(--color-background);
+
     font-size: .95rem;
     font-weight: 600;
+
     cursor: pointer;
-    box-shadow: var(--shadow-primary);
-    transition: transform var(--transition-default),
-                box-shadow var(--transition-default);
+
+    box-shadow: 0 10px 30px rgba(0,232,90,.18);
+
+    transition:
+        transform .30s ease,
+        box-shadow .30s ease;
 }
 
 .navbar__button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 18px 40px rgba(0, 232, 90, .28);
+    transform: translateY(-3px);
+
+    box-shadow: 0 18px 40px rgba(0,232,90,.28);
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .navbar__container {
+        width: 94%;
+    }
+
+    .navbar__navigation {
+        gap: 32px;
+    }
+
+    .navbar__menu {
+        gap: 24px;
+    }
+
+    .navbar__button {
+        min-width: 160px;
+        height: 48px;
+        padding: 0 22px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar__menu {
+        display: none;
+    }
+
+    .navbar__button {
+        min-width: auto;
+        padding: 0 22px;
+    }
+
 }

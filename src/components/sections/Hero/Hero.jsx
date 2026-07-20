@@ -24,13 +24,19 @@ function Hero() {
 
                     <div className="hero__buttons">
 
-                        <button className="hero__button hero__button--primary">
+                        <a
+                            href="#cta"
+                            className="hero__button hero__button--primary"
+                        >
                             Começar minha jornada
-                        </button>
+                        </a>
 
-                        <button className="hero__button hero__button--secondary">
+                        <a
+                            href="#metodologia"
+                            className="hero__button hero__button--secondary"
+                        >
                             Conhecer a metodologia
-                        </button>
+                        </a>
 
                     </div>
 
@@ -49,7 +55,7 @@ function Hero() {
                         <header className="dashboard__header">
 
                             <span className="dashboard__brand">
-                                 DevClub
+                                DevClub
                             </span>
 
                         </header>

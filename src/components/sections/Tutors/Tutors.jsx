@@ -1,68 +1,120 @@
 import "./Tutors.css";
 
-import rodolfoMori from "../../../assets/images/tutors/rodolfomori.jpg";
+import { ArrowRight } from "lucide-react";
+
+import { tutor } from "./tutorsData";
 
 function Tutors() {
   return (
-    <section className="tutors">
-      <div className="tutors__container">
+    <section className="tutors" id="tutors">
 
-        <span className="tutors__badge">
-          CAPÍTULO 06
-        </span>
-
-        <h2 className="tutors__title">
-          Aprenda com quem vive tecnologia.
-        </h2>
-
-        <p className="tutors__description">
-          Tenha acesso a conteúdos práticos, mentorias e uma metodologia criada
-          por profissionais que atuam diariamente no mercado.
-        </p>
+      <div className="container">
 
         <div className="tutors__content">
 
-          <div className="tutors__image">
-            <img
-              src={rodolfoMori}
-              alt="Rodolfo Mori"
-            />
-          </div>
+          {/* FOTO */}
 
-          <div className="tutors__info">
+          <div className="tutors__image-column">
 
-            <span className="tutors__role">
-              Fundador do DevClub
+            <span className="tutors__background-text">
+              MENTOR
             </span>
 
-            <h3>
-              Rodolfo Mori
-            </h3>
+            <div className="tutors__image-wrapper">
 
-            <p>
-              Desenvolvedor de software, empreendedor e fundador do DevClub.
-              Sua missão é tornar a programação acessível para quem deseja
-              conquistar uma carreira na tecnologia através da prática.
-            </p>
-
-            <div className="tutors__skills">
-
-              <span>React</span>
-              <span>JavaScript</span>
-              <span>Node.js</span>
-              <span>Carreira</span>
+              <img
+                src={tutor.image}
+                alt={tutor.name}
+                className="tutors__image"
+              />
 
             </div>
 
-            <button className="tutors__button">
-              Conheça a metodologia
-            </button>
+          </div>
+
+          {/* TEXTO */}
+
+          <div className="tutors__text">
+
+            <span className="tutors__badge">
+
+              Capítulo 06
+
+            </span>
+
+            <h2>
+
+              {tutor.headline}
+
+            </h2>
+
+            <p className="tutors__subtitle">
+
+              {tutor.subtitle}
+
+            </p>
+
+            <div className="tutors__letter">
+
+              {tutor.letter.map((paragraph, index) => (
+
+                <p key={index}>
+
+                  {paragraph}
+
+                </p>
+
+              ))}
+
+            </div>
+
+            <div className="tutors__tags">
+
+              {tutor.tags.map((tag) => (
+
+                <span key={tag}>
+
+                  {tag}
+
+                </span>
+
+              ))}
+
+            </div>
+
+            <a
+              href="#contact"
+              className="btn btn-primary tutors__button"
+            >
+
+              Quero aprender com essa metodologia
+
+              <ArrowRight size={18} />
+
+            </a>
+
+            <div className="tutors__signature">
+
+              <strong>
+
+                {tutor.signature}
+
+              </strong>
+
+              <span>
+
+                {tutor.role}
+
+              </span>
+
+            </div>
 
           </div>
 
         </div>
 
       </div>
+
     </section>
   );
 }

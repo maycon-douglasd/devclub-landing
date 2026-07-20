@@ -3,71 +3,603 @@
 ========================================================== */
 
 .manifesto {
-    padding: 140px 20px;
-    background: var(--color-background);
+    position: relative;
+
+    padding: 180px 20px;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(0, 232, 90, .08),
+            transparent 40%),
+        var(--color-background);
+
+    overflow: hidden;
 }
 
-.manifesto .container {
+.manifesto__container {
+    position: relative;
+
     width: min(100%, var(--layout-max-width));
+
     max-width: 900px;
+
     margin: 0 auto;
-    text-align: center;
+
+    z-index: 5;
 }
 
-.manifesto-badge {
-    display: inline-block;
-    margin-bottom: 24px;
-    padding: .55rem 1.1rem;
+/* ==========================================================
+   FUNDO
+========================================================== */
 
-    font-size: .85rem;
-    font-weight: 700;
-    letter-spacing: .3em;
-    text-transform: uppercase;
+.manifesto__glow {
+    position: absolute;
+
+    top: -250px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 900px;
+    height: 900px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(0, 232, 90, .08),
+            transparent 70%);
+
+    filter: blur(30px);
+
+    pointer-events: none;
+}
+
+.manifesto__number {
+    position: absolute;
+
+    top: 80px;
+    right: 8%;
+
+    font-size: 20rem;
+
+    font-weight: 900;
+
+    color: rgba(255, 255, 255, .025);
+
+    pointer-events: none;
+
+    line-height: 1;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.manifesto__header {
+
+    text-align: center;
+
+    margin-bottom: 100px;
+
+}
+
+.manifesto__badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 22px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(0, 232, 90, .25);
+
+    background: rgba(0, 232, 90, .08);
 
     color: var(--color-primary);
-    background: rgba(0, 232, 90, .12);
-    border: 1px solid rgba(0, 232, 90, .35);
-    border-radius: 999px;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .30em;
+
+    margin-bottom: 28px;
+
 }
 
-.manifesto-title {
-    max-width: 700px;
-    margin: 0 auto;
+.manifesto__title {
 
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 1.05;
+
     font-weight: 800;
-    line-height: 1.1;
+
+    letter-spacing: -2px;
 
     color: var(--color-text);
+
 }
 
-.manifesto-description {
-    max-width: 650px;
-    margin: 48px auto 0;
+.manifesto__title span {
 
-    font-size: clamp(1rem, 1.4vw, 1.2rem);
-    line-height: 2;
+    background: var(--gradient-primary);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+/* ==========================================================
+   TIMELINE
+========================================================== */
+
+.manifesto__timeline {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 48px;
+
+    margin: 0 auto 120px;
+
+    width: fit-content;
+}
+
+.manifesto__timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 2px;
+
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(0, 232, 90, .25),
+            rgba(0, 232, 90, .8),
+            rgba(0, 232, 90, .25),
+            transparent);
+}
+
+.manifesto__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+
+    z-index: 2;
+}
+
+.manifesto__dot {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    border: 4px solid var(--color-background);
+
+    box-shadow:
+        0 0 0 6px rgba(0, 232, 90, .12),
+        0 0 30px rgba(0, 232, 90, .55);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.manifesto__item:hover .manifesto__dot {
+
+    transform: scale(1.25);
+
+    box-shadow:
+        0 0 0 10px rgba(0, 232, 90, .18),
+        0 0 45px rgba(0, 232, 90, .85);
+
+}
+
+.manifesto__item p {
+
+    margin: 0;
+
+    font-size: 1.25rem;
+
+    font-weight: 600;
+
+    letter-spacing: -.4px;
+
+    color: var(--color-text);
+
+    transition:
+        color .30s ease,
+        transform .30s ease;
+
+}
+
+.manifesto__item:hover p {
+
+    color: var(--color-primary);
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   FINAL
+========================================================== */
+
+.manifesto__message {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+.manifesto__subtitle {
+
+    font-size: 1.2rem;
 
     color: var(--color-text-secondary);
+
+    margin-bottom: 18px;
+
+}
+
+.manifesto__final {
+
+    font-size: clamp(3rem, 5vw, 4.5rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+
+    background: var(--gradient-primary);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+.manifesto__description {
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-secondary);
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+
+}
+
+/* ==========================================================
+   CARDS FLUTUANTES
+========================================================== */
+
+.manifesto__card {
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 130px;
+    height: 54px;
+
+    padding: 0 22px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, .04);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    color: var(--color-text);
+
+    font-size: .95rem;
+    font-weight: 600;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .35);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    animation: floating 7s ease-in-out infinite;
+
+    z-index: 3;
+}
+
+.manifesto__card:hover {
+
+    transform: translateY(-8px) scale(1.04);
+
+    border-color: rgba(0, 232, 90, .45);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .45),
+        0 0 30px rgba(0, 232, 90, .18);
+
+}
+
+.manifesto__card--html {
+
+    top: 260px;
+    left: 7%;
+
+}
+
+.manifesto__card--css {
+
+    top: 500px;
+    left: 12%;
+
+    animation-delay: 1.2s;
+
+}
+
+.manifesto__card--js {
+
+    bottom: 220px;
+    left: 9%;
+
+    animation-delay: 2s;
+
+}
+
+.manifesto__card--react {
+
+    top: 240px;
+    right: 8%;
+
+    animation-delay: .8s;
+
+}
+
+.manifesto__card--git {
+
+    top: 520px;
+    right: 12%;
+
+    animation-delay: 1.6s;
+
+}
+
+.manifesto__card--node {
+
+    bottom: 220px;
+    right: 9%;
+
+    animation-delay: 2.6s;
+
+}
+
+.manifesto__bridge {
+
+    margin-top: 140px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 24px;
+
+}
+
+.manifesto__line {
+
+    width: 2px;
+
+    height: 70px;
+
+    background: linear-gradient(transparent,
+            rgba(0, 232, 90, .8));
+
+}
+
+.manifesto__bridge p {
+
+    color: var(--color-text-secondary);
+
+    max-width: 420px;
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+}
+
+.manifesto__bridge h3 {
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    color: white;
+
+    font-weight: 700;
+
+}
+
+.manifesto__bridge span {
+
+    color: var(--color-primary);
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: .8rem;
+
+}
+
+.manifesto__arrow {
+
+    font-size: 2rem;
+
+    color: var(--color-primary);
+
+    animation: arrowDown 2s infinite;
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+@keyframes arrowDown {
+
+    0% {
+
+        transform: translateY(0);
+
+        opacity: .5;
+
+    }
+
+    50% {
+
+        transform: translateY(12px);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+        opacity: .5;
+
+    }
+
 }
 
 /* ==========================================================
    RESPONSIVO
 ========================================================== */
 
-@media (max-width: 768px) {
+@media (max-width:1200px) {
+
+    .manifesto__card {
+
+        display: none;
+
+    }
+
+}
+
+@media (max-width:768px) {
 
     .manifesto {
-        padding: 100px 24px;
+
+        padding: 120px 24px;
+
     }
 
-    .manifesto-title {
-        font-size: clamp(2rem, 9vw, 3rem);
+    .manifesto__number {
+
+        font-size: 10rem;
+
+        top: 40px;
+
+        right: 16px;
+
     }
 
-    .manifesto-description {
-        margin-top: 36px;
-        line-height: 1.9;
+    .manifesto__header {
+
+        margin-bottom: 70px;
+
+    }
+
+    .manifesto__timeline {
+
+        gap: 36px;
+
+        margin-bottom: 80px;
+
+    }
+
+    .manifesto__item p {
+
+        font-size: 1.05rem;
+
+    }
+
+    .manifesto__subtitle {
+
+        font-size: 1rem;
+
+    }
+
+    .manifesto__description {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
     }
 
 }

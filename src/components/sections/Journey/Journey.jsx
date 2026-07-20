@@ -1,73 +1,129 @@
 import "./Journey.css";
-
-const steps = [
-    {
-        number: "01",
-        title: "Entrar no DevClub",
-        description: "Tenha acesso à comunidade e à plataforma."
-    },
-    {
-        number: "02",
-        title: "Fundamentos",
-        description: "Domine HTML, CSS, JavaScript e Git."
-    },
-    {
-        number: "03",
-        title: "Projetos Reais",
-        description: "Construa aplicações para o seu portfólio."
-    },
-    {
-        number: "04",
-        title: "Comunidade",
-        description: "Aprenda junto com milhares de alunos."
-    },
-    {
-        number: "05",
-        title: "Mentorias",
-        description: "Receba orientação de desenvolvedores experientes."
-    },
-    {
-        number: "06",
-        title: "Primeira oportunidade",
-        description: "Esteja preparado para conquistar sua vaga."
-    }
-];
+import { Trophy } from "lucide-react";
+import { journeySteps } from "./journeyData";
 
 function Journey() {
     return (
-        <section className="journey">
-            <div className="journey__container">
+        <section className="journey" id="journey">
+            <div className="container">
 
-                <span className="journey__badge">CAPÍTULO 03</span>
+                <div className="journey__header">
 
-                <h2 className="journey__title">
-                    Sua jornada começa aqui.
-                </h2>
+                    <span className="journey__badge">
+                        Capítulo 03
+                    </span>
 
-                <p className="journey__description">
-                    Cada etapa foi construída para transformar quem está começando em um profissional preparado para o mercado.
-                </p>
+                    <h2>
+                        Do primeiro código
+                        <br />
+                        à primeira vaga.
+                    </h2>
+
+                    <p>
+                        Cada etapa foi pensada para transformar um iniciante
+                        em um desenvolvedor preparado para o mercado.
+                    </p>
+
+                </div>
 
                 <div className="journey__timeline">
-                    {steps.map((step) => (
-                        <div className="journey__step" key={step.number}>
 
-                            <div className="journey__number">
-                                {step.number}
-                            </div>
+                    {journeySteps.map((step) => {
 
-                            <div className="journey__content">
-                                <div className="journey__circle"></div>
+                        const Icon = step.icon;
 
-                                <div className="journey__text">
+                        return (
+
+                            <div
+                                className="journey__step"
+                                key={step.id}
+                            >
+
+                                <div className="journey__number">
+
+                                    <div className="journey__icon">
+                                        <Icon size={20} />
+                                    </div>
+
+                                    <span>{step.id}</span>
+
+                                </div>
+
+                                <div className="journey__card">
+
                                     <h3>{step.title}</h3>
+
                                     <p>{step.description}</p>
+
                                 </div>
 
                             </div>
 
+                        );
+
+                    })}
+
+                </div>
+
+                <div className="journey__final">
+
+                    <div className="journey__trophy">
+
+                        <Trophy size={36} />
+
+                    </div>
+
+                    <span className="journey__final-badge">
+                        Objetivo alcançado
+                    </span>
+
+                    <h3>
+                        Sua primeira vaga começa com uma decisão.
+                    </h3>
+
+                    <p>
+                        Você entra sem experiência.
+                        Aprende com projetos reais, recebe mentorias,
+                        monta um portfólio profissional e conquista
+                        a confiança necessária para disputar vagas
+                        no mercado de tecnologia.
+                    </p>
+
+                    <div className="journey__stats">
+
+                        <div className="journey__stat">
+
+                            <strong>+40</strong>
+
+                            <span>Projetos</span>
+
                         </div>
-                    ))}
+
+                        <div className="journey__stat">
+
+                            <strong>+300</strong>
+
+                            <span>Aulas</span>
+
+                        </div>
+
+                        <div className="journey__stat">
+
+                            <strong>∞</strong>
+
+                            <span>Possibilidades</span>
+
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="#contact"
+                        className="btn btn-primary"
+                    >
+                        Quero começar agora
+                    </a>
+
                 </div>
 
             </div>

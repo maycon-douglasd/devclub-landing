@@ -1,333 +1,171 @@
+/* ==========================================================
+   ABOUT
+========================================================== */
+
 .about {
-    padding: 6rem 0;
-}
 
-.about__container {
-    width: min(90%, var(--layout-max-width));
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
     position: relative;
+
+    padding: 10px 20px 160px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(0, 232, 90, .05),
+            transparent 55%),
+        var(--color-background);
+
 }
 
-.about__container::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    background: radial-gradient(circle,
-            rgba(0, 232, 90, .12) 0%,
-            rgba(0, 232, 90, .04) 45%,
-            transparent 75%);
-    filter: blur(40px);
-    pointer-events: none;
+.about .container {
+
+    width: min(100%, var(--layout-max-width));
+
+    margin: auto;
+
 }
 
-.about__content,
-.about__illustration {
-    flex: 1;
-}
+.about__header {
 
-/* ===========================
-   TEXTO
-=========================== */
+    text-align: center;
+
+    max-width: 820px;
+
+    margin: 0 auto 90px;
+
+}
 
 .about__badge {
+
     display: inline-flex;
+
     align-items: center;
-    gap: .5rem;
-    padding: .55rem 1.1rem;
-    background: rgba(0, 232, 90, .12);
-    border: 1px solid rgba(0, 232, 90, .35);
-    border-radius: 999px;
-    color: var(--color-primary);
-    font-size: .78rem;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-}
 
-.about__badge::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--color-primary);
-    box-shadow:
-        0 0 10px var(--color-primary),
-        0 0 20px var(--color-secondary);
-}
-
-.about__title {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--color-text);
-    margin-bottom: 2rem;
-    max-width: 600px;
-}
-
-.about__description {
-    max-width: 600px;
-    color: var(--color-text-secondary);
-}
-
-.about__description p {
-    font-size: 1.08rem;
-    line-height: 1.9;
-    margin-bottom: 1rem;
-}
-
-.about__highlight {
-    margin: 2rem 0;
-    color: var(--color-text);
-    font-weight: 500;
-}
-
-.about__highlight strong {
-    color: var(--color-primary);
-    font-weight: 700;
-}
-
-/* ===========================
-   CARD
-=========================== */
-
-.about__illustration {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 400px;
-}
 
-.about__card {
-    width: 100%;
-    max-width: 420px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    box-shadow: var(--shadow-primary);
-    transition:
-        transform var(--transition-default),
-        box-shadow var(--transition-default);
-    position: relative;
-    overflow: hidden;
-}
+    padding: 10px 24px;
 
-.about__card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg,
-            rgba(0, 232, 90, .08),
-            transparent 35%);
-    pointer-events: none;
-}
+    border-radius: 999px;
 
-.about__card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 24px 45px rgba(0, 232, 90, .22);
-}
+    border: 1px solid rgba(0, 232, 90, .25);
 
-.about__card-header {
-    margin-bottom: 2rem;
-}
+    background: rgba(0, 232, 90, .08);
 
-.about__card-badge {
-    display: inline-block;
-    padding: .35rem .8rem;
-    background: rgba(0, 232, 90, .12);
     color: var(--color-primary);
-    border-radius: 999px;
-    font-size: .75rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    letter-spacing: .12em;
-    box-shadow: 0 0 15px rgba(0, 232, 90, .18);
+
+    font-size: .82rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .25em;
+
+    margin-bottom: 28px;
+
 }
 
-.about__card-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1.4;
+.about__header h2 {
+
+    font-size: clamp(3rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 24px;
+
     color: var(--color-text);
+
 }
 
-/* ===========================
-   PROGRESSO GERAL
-=========================== */
+.about__header p {
 
-.about__overall-progress {
-    margin-bottom: 2rem;
-}
+    font-size: 1.2rem;
 
-.about__overall-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: .75rem;
-    font-size: .9rem;
-    font-weight: 600;
     color: var(--color-text-secondary);
+
+    line-height: 1.8;
+
 }
 
-.about__progress-bar {
-    width: 100%;
-    height: 10px;
-    background: var(--color-border);
-    border-radius: 999px;
-    overflow: hidden;
+.about__journey {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-bottom: 120px;
+
 }
 
-.about__progress-fill {
-    width: 68%;
-    height: 100%;
-    background: var(--gradient-primary);
-    border-radius: 999px;
-}
+.journey-card {
 
-/* ===========================
-   LISTA DE TECNOLOGIAS
-=========================== */
+    padding: 40px;
 
-.about__progress-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--color-border);
-    cursor: pointer;
-    transition:
-        background-color var(--transition-default),
-        padding var(--transition-default);
-}
+    border-radius: 24px;
 
-.about__progress-item:hover {
     background: rgba(255, 255, 255, .03);
-    padding-left: .75rem;
-    padding-right: .75rem;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    transition: .35s;
+
+    text-align: center;
+
 }
 
-.about__progress-tech {
+.journey-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(0, 232, 90, .35);
+
+    box-shadow:
+
+        0 20px 45px rgba(0, 0, 0, .35),
+
+        0 0 35px rgba(0, 232, 90, .15);
+
+}
+
+.journey-card__icon {
+
+    width: 74px;
+
+    height: 74px;
+
+    margin: auto;
+
+    margin-bottom: 24px;
+
+    border-radius: 50%;
+
     display: flex;
+
     align-items: center;
-    gap: .45rem;
-    font-size: .95rem;
-    font-weight: 600;
-    color: var(--color-text);
-}
 
-.about__tech-icon {
-    font-size: 1.1rem;
-    flex-shrink: 0;
-}
+    justify-content: center;
 
-.about__tech-icon--html {
-    color: #E34F26;
-}
+    background: rgba(0, 232, 90, .12);
 
-.about__tech-icon--css {
-    color: #1572B6;
-}
-
-.about__tech-icon--js {
-    color: #F7DF1E;
-}
-
-.about__tech-icon--react {
-    color: #61DAFB;
-}
-
-.about__tech-icon--node {
-    color: #339933;
-}
-
-/* ===========================
-   STATUS
-=========================== */
-
-.about__progress-status {
-    padding: .3rem .7rem;
-    border-radius: 999px;
-    font-size: .8rem;
-    font-weight: 600;
-}
-
-.about__progress-status--completed {
-    background: rgba(0, 232, 90, .15);
     color: var(--color-primary);
+
+    font-size: 2rem;
+
 }
 
-.about__progress-status--progress {
-    background: rgba(25, 255, 114, .15);
-    color: var(--color-secondary);
+.journey-card h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 1.4rem;
+
 }
 
-.about__progress-status--upcoming {
-    background: rgba(255, 255, 255, .08);
-    color: var(--color-text);
-}
+.journey-card p {
 
-.about__progress-status--pending {
-    background: var(--color-border);
     color: var(--color-text-secondary);
-}
 
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media (max-width: 992px) {
-
-    .about__container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about__title {
-        font-size: 2.5rem;
-    }
-
-    .about__description {
-        max-width: 100%;
-    }
-
-    .about__card {
-        margin-top: 2rem;
-    }
-
-}
-
-@media (max-width: 768px) {
-
-    .about {
-        padding: 5rem 0;
-    }
-
-    .about__title {
-        font-size: 2rem;
-    }
-
-    .about__description p {
-        font-size: 1rem;
-    }
-
-    .about__card {
-        padding: 1.5rem;
-    }
+    line-height: 1.8;
 
 }

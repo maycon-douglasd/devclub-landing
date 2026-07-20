@@ -25,89 +25,158 @@ function Evolution() {
         <section className="evolution" id="evolution">
             <div className="container">
 
-                <span className="chapter">
-                    CAPÍTULO 08
-                </span>
+                {/* HEADER */}
 
-                <span className="section-tag">
-                    SUA EVOLUÇÃO COMEÇA AQUI
-                </span>
+                <div className="section-header">
 
-                <h2>
-                    Muito além de um curso de programação.
-                </h2>
+                    <span className="chapter">
+                        CAPÍTULO 07
+                    </span>
 
-                <p className="section-description">
-                    Você entra para uma comunidade que aprende junto,
-                    desenvolve projetos reais e se prepara para conquistar
-                    oportunidades no mercado de tecnologia.
-                </p>
+                    <span className="section-tag">
+                        SUA EVOLUÇÃO CONTINUA AQUI
+                    </span>
 
-                {/* Comunidade */}
+                    <h2>
+                        Você nunca estará sozinho nessa jornada.
+                    </h2>
+
+                    <p className="section-description">
+                        Aprender programação é apenas o começo.
+                        A verdadeira evolução acontece quando você faz parte
+                        de uma comunidade que compartilha conhecimento,
+                        cria oportunidades e cresce junto todos os dias.
+                    </p>
+
+                </div>
+
+                {/* CARD PRINCIPAL */}
 
                 <div className="community-card">
 
-                    <h3>💬 Comunidade DevClub</h3>
+                    <h3>
+                        Cresça ao lado de milhares de desenvolvedores.
+                    </h3>
 
                     <p>
-                        Mais de <strong>50 mil desenvolvedores</strong> compartilhando
-                        conhecimento diariamente.
+                        Compartilhe conhecimento, tire dúvidas,
+                        participe de mentorias e evolua diariamente
+                        com pessoas que possuem o mesmo objetivo
+                        que você.
                     </p>
 
                     <div className="community-items">
-                        <div className="item">✅ Networking</div>
-                        <div className="item">✅ Feedback</div>
-                        <div className="item">✅ Mentorias</div>
-                        <div className="item">✅ Eventos</div>
+
+                        <div className="item">
+                            🤝 Networking
+                        </div>
+
+                        <div className="item">
+                            🎯 Mentorias
+                        </div>
+
+                        <div className="item">
+                            💬 Comunidade
+                        </div>
+
+                        <div className="item">
+                            🚀 Mercado
+                        </div>
+
                     </div>
 
                 </div>
 
-                {/* Empresas */}
+                {/* MOSAICO */}
 
-                <div className="companies-area">
+                <div className="evolution-grid">
 
-                    <h3>Empresas onde nossos alunos buscam oportunidades</h3>
+                    {/* EMPRESAS */}
 
-                    <div className="companies-grid">
-                        {companies.map((logo, index) => (
-                            <div className="company-card" key={index}>
-                                <img src={logo} alt="Empresa" />
-                            </div>
-                        ))}
+                    <div className="companies-area">
+
+                        <h3>
+                            Empresas que fazem parte do objetivo dos nossos alunos.
+                        </h3>
+
+                        <div className="companies-grid">
+
+                            {companies.map((logo, index) => (
+
+                                <div
+                                    className="company-card"
+                                    key={index}
+                                >
+
+                                    <img
+                                        src={logo}
+                                        alt="Empresa"
+                                    />
+
+                                </div>
+
+                            ))}
+
+                        </div>
+
+                    </div>
+
+                    {/* EVOLUÇÃO */}
+
+                    <div className="transformation">
+
+                        <div className="before">
+
+                            <h3>ANTES</h3>
+
+                            <ul>
+
+                                <li>😕 Estudando sozinho</li>
+
+                                <li>📚 Apenas teoria</li>
+
+                                <li>❌ Sem direção</li>
+
+                                <li>😟 Insegurança nas entrevistas</li>
+
+                            </ul>
+
+                        </div>
+
+                        <div className="after">
+
+                            <h3>DEPOIS</h3>
+
+                            <ul>
+
+                                <li>🤝 Aprendendo em comunidade</li>
+
+                                <li>💻 Projetos reais</li>
+
+                                <li>🧭 Método validado</li>
+
+                                <li>🚀 Mais confiança para o mercado</li>
+
+                            </ul>
+
+                        </div>
+
                     </div>
 
                 </div>
 
-                {/* Antes x Depois */}
+                {/* FECHAMENTO */}
 
-                <div className="transformation">
+                <div className="community-footer">
 
-                    <div className="before">
+                    <h3>
+                        Nenhum desenvolvedor cresce sozinho.
+                    </h3>
 
-                        <h3>ANTES</h3>
-
-                        <ul>
-                            <li>❌ Sem direção</li>
-                            <li>❌ Sem portfólio</li>
-                            <li>❌ Sem experiência</li>
-                            <li>❌ Insegurança nas entrevistas</li>
-                        </ul>
-
-                    </div>
-
-                    <div className="after">
-
-                        <h3>DEPOIS</h3>
-
-                        <ul>
-                            <li>✅ Plano de estudos</li>
-                            <li>✅ Projetos reais</li>
-                            <li>✅ Portfólio profissional</li>
-                            <li>✅ Mais preparado para o mercado</li>
-                        </ul>
-
-                    </div>
+                    <p>
+                        Na DevClub, você encontra uma comunidade pronta
+                        para caminhar ao seu lado em cada etapa da sua evolução.
+                    </p>
 
                 </div>
 
