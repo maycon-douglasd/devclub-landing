@@ -6,10 +6,6 @@ function Hero() {
 
             <div className="hero__container">
 
-                {/* ======================================================
-                    CONTEÚDO
-                ====================================================== */}
-
                 <div className="hero__content">
 
                     <h1 className="hero__title">
@@ -42,15 +38,9 @@ function Hero() {
 
                 </div>
 
-                {/* ======================================================
-                    MOCKUP DA PLATAFORMA
-                ====================================================== */}
-
                 <div className="hero__mockup">
 
                     <div className="hero__dashboard">
-
-                        {/* Header */}
 
                         <header className="dashboard__header">
 
@@ -59,8 +49,6 @@ function Hero() {
                             </span>
 
                         </header>
-
-                        {/* Conteúdo */}
 
                         <main className="dashboard__content">
 

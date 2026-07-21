@@ -24,9 +24,6 @@ function Evolution() {
     return (
         <section className="evolution" id="evolution">
             <div className="container">
-
-                {/* HEADER */}
-
                 <div className="section-header">
 
                     <span className="chapter">
@@ -49,8 +46,6 @@ function Evolution() {
                     </p>
 
                 </div>
-
-                {/* CARD PRINCIPAL */}
 
                 <div className="community-card">
 
@@ -87,11 +82,7 @@ function Evolution() {
 
                 </div>
 
-                {/* MOSAICO */}
-
                 <div className="evolution-grid">
-
-                    {/* EMPRESAS */}
 
                     <div className="companies-area">
 
@@ -120,8 +111,6 @@ function Evolution() {
                         </div>
 
                     </div>
-
-                    {/* EVOLUÇÃO */}
 
                     <div className="transformation">
 
@@ -164,8 +153,6 @@ function Evolution() {
                     </div>
 
                 </div>
-
-                {/* FECHAMENTO */}
 
                 <div className="community-footer">
 

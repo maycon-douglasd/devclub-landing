@@ -12,8 +12,6 @@ function Tutors() {
 
         <div className="tutors__content">
 
-          {/* FOTO */}
-
           <div className="tutors__image-column">
 
             <span className="tutors__background-text">
@@ -31,8 +29,6 @@ function Tutors() {
             </div>
 
           </div>
-
-          {/* TEXTO */}
 
           <div className="tutors__text">
 

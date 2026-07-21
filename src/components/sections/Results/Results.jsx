@@ -30,10 +30,6 @@ function Results() {
 
                 </div>
 
-                {/* ==========================
-                    ESTATÍSTICAS
-                =========================== */}
-
                 <div className="results__stats">
 
                     {stats.map((stat) => (
@@ -54,10 +50,6 @@ function Results() {
                     ))}
 
                 </div>
-
-                {/* ==========================
-                    DEPOIMENTO DESTAQUE
-                =========================== */}
 
                 <div className="testimonial-featured">
 
@@ -106,10 +98,6 @@ function Results() {
                     </div>
 
                 </div>
-
-                {/* ==========================
-                    OUTROS DEPOIMENTOS
-                =========================== */}
 
                 <div className="testimonials-grid">
 
@@ -165,10 +153,6 @@ function Results() {
                     ))}
 
                 </div>
-
-                {/* ==========================
-                    CTA FINAL
-                =========================== */}
 
                 <div className="results__cta">
 

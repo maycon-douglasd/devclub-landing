@@ -6,11 +6,9 @@
         radial-gradient(circle at top left,
             rgba(0, 255, 136, 0.08),
             transparent 35%),
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #0b0b0b 0%,
-            #111111 100%
-        );
+            #111111 100%);
 }
 
 .tutors::before {
@@ -18,15 +16,11 @@
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(
-            rgba(255,255,255,.02) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.02) 1px,
-            transparent 1px
-        );
+        linear-gradient(rgba(255, 255, 255, .02) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .02) 1px,
+            transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
 }
@@ -49,81 +43,52 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
-
     font-size: clamp(5rem, 12vw, 10rem);
     font-weight: 900;
     letter-spacing: .4rem;
-
-    color: rgba(255,255,255,.03);
+    color: rgba(255, 255, 255, .03);
     pointer-events: none;
     white-space: nowrap;
 }
 
 .tutors__image-wrapper {
     position: relative;
-
     width: 420px;
     max-width: 100%;
-
     border-radius: 28px;
-
     overflow: hidden;
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    background: rgba(255,255,255,.03);
-
+    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, .03);
     box-shadow:
-        0 30px 80px rgba(0,0,0,.45);
+        0 30px 80px rgba(0, 0, 0, .45);
 }
 
 .tutors__image-wrapper::before {
-
     content: "";
-
     position: absolute;
-
     width: 320px;
     height: 320px;
-
     background: #00ff88;
-
     filter: blur(120px);
-
     opacity: .18;
-
     top: -80px;
     left: 50%;
-
     transform: translateX(-50%);
-
     z-index: 0;
 }
 
 .tutors__image {
-
     position: relative;
-
     width: 100%;
-
     display: block;
-
     z-index: 1;
-
     transition: .5s;
 }
 
 .tutors__image-wrapper:hover .tutors__image {
-
     transform: scale(1.03);
-
 }
-
-/* ==========================
-   TEXTO
-========================== */
 
 .tutors__text {
     display: flex;
@@ -134,17 +99,12 @@
 .tutors__badge {
     display: inline-flex;
     align-items: center;
-
     margin-bottom: 1rem;
     padding: .45rem 1rem;
-
     border: 1px solid rgba(0, 255, 136, .25);
     border-radius: 999px;
-
     background: rgba(0, 255, 136, .08);
-
     color: var(--primary-color);
-
     font-size: .85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -153,274 +113,173 @@
 
 .tutors__text h2 {
     margin-bottom: 1.5rem;
-
     font-size: clamp(2.5rem, 4vw, 4rem);
     line-height: 1.1;
     font-weight: 800;
-
     color: var(--white);
 }
 
 .tutors__subtitle {
     max-width: 620px;
-
     margin-bottom: 2.5rem;
-
     color: var(--gray-300);
-
     font-size: 1.1rem;
     line-height: 1.8;
 }
 
-/* ==========================
-   CARTA
-========================== */
-
 .tutors__letter {
     position: relative;
-
     margin-bottom: 2.5rem;
     padding-left: 1.5rem;
-
     border-left: 3px solid rgba(0, 255, 136, .35);
 }
 
 .tutors__letter p {
-
     margin-bottom: 1.4rem;
-
     color: var(--gray-200);
-
     font-size: 1.05rem;
     line-height: 2;
 }
 
 .tutors__letter p:last-child {
-
     margin-top: 2rem;
-
     margin-bottom: 0;
-
     font-size: 1.2rem;
     font-weight: 700;
-
     color: var(--white);
 }
 
-/* ==========================
-   TAGS
-========================== */
-
 .tutors__tags {
-
     display: flex;
     flex-wrap: wrap;
     gap: .9rem;
-
     margin-bottom: 2.5rem;
 }
 
 .tutors__tags span {
-
     padding: .8rem 1.3rem;
-
     border-radius: 999px;
-
-    background: rgba(255,255,255,.05);
-
-    border: 1px solid rgba(255,255,255,.08);
-
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
     color: var(--gray-100);
-
     font-size: .95rem;
     font-weight: 600;
-
     transition: .3s;
 }
 
 .tutors__tags span:hover {
-
     transform: translateY(-3px);
-
-    background: rgba(0,255,136,.12);
-
-    border-color: rgba(0,255,136,.35);
-
+    background: rgba(0, 255, 136, .12);
+    border-color: rgba(0, 255, 136, .35);
     color: var(--primary-color);
 }
 
-/* ==========================
-   CTA
-========================== */
-
 .tutors__button {
-
     display: inline-flex;
     align-items: center;
     gap: .75rem;
-
     margin-bottom: 3rem;
 }
 
 .tutors__signature {
-
     padding-top: 2rem;
-
     width: 100%;
     max-width: 320px;
-
-    border-top: 1px solid rgba(255,255,255,.08);
+    border-top: 1px solid rgba(255, 255, 255, .08);
 }
 
 .tutors__signature strong {
-
     display: block;
-
     margin-bottom: .4rem;
-
     font-size: 1.15rem;
-
     color: var(--white);
 }
 
 .tutors__signature span {
-
     color: var(--gray-400);
-
     font-size: .95rem;
 }
 
-/* ===================================
-   RESPONSIVO
-=================================== */
-
 @media (max-width: 992px) {
-
     .tutors {
-
         padding: 6rem 0;
-
     }
 
     .tutors__content {
-
         grid-template-columns: 1fr;
-
         gap: 4rem;
-
     }
 
     .tutors__image-column {
-
         order: -1;
-
     }
 
     .tutors__image-wrapper {
-
         width: 380px;
-
     }
 
     .tutors__text {
-
         text-align: center;
-
         align-items: center;
-
     }
 
     .tutors__subtitle {
-
         max-width: 100%;
-
     }
 
     .tutors__letter {
-
         padding-left: 0;
-
         padding-top: 2rem;
-
         border-left: none;
-
-        border-top: 3px solid rgba(0,255,136,.35);
-
+        border-top: 3px solid rgba(0, 255, 136, .35);
         text-align: left;
-
         width: 100%;
-
     }
 
     .tutors__tags {
-
         justify-content: center;
-
     }
 
     .tutors__signature {
-
         text-align: center;
-
     }
 
 }
 
 @media (max-width: 768px) {
-
     .tutors {
-
         padding: 5rem 0;
-
     }
 
     .tutors__image-wrapper {
-
         width: 100%;
         max-width: 320px;
-
     }
 
     .tutors__background-text {
-
         font-size: 4.5rem;
-
         letter-spacing: .2rem;
-
     }
 
     .tutors__text h2 {
-
         font-size: 2.2rem;
-
     }
 
     .tutors__subtitle {
-
         font-size: 1rem;
-
     }
 
     .tutors__letter p {
-
         font-size: 1rem;
-
         line-height: 1.9;
-
     }
 
     .tutors__tags {
-
         gap: .7rem;
-
     }
 
     .tutors__tags span {
-
         padding: .7rem 1rem;
-
         font-size: .85rem;
-
     }
-
 }

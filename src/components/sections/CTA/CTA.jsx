@@ -8,8 +8,6 @@ function CTA() {
 
       <div className="container">
 
-        {/* HEADER */}
-
         <div className="cta__header">
 
           <span className="chapter">
@@ -43,8 +41,6 @@ function CTA() {
           </p>
 
         </div>
-
-        {/* CTA */}
 
         <div className="cta__content">
 
@@ -106,8 +102,6 @@ function CTA() {
           </div>
 
         </div>
-
-        {/* FOOTER */}
 
         <footer className="footer">
 

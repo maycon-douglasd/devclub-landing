@@ -1,12 +1,7 @@
-/* ==========================================
-   EVOLUTION
-========================================== */
-
 .evolution {
   position: relative;
   padding: 9rem 0;
   overflow: hidden;
-
   background:
     radial-gradient(circle at top right,
       rgba(0, 255, 136, .08),
@@ -17,631 +12,365 @@
 }
 
 .evolution::before {
-
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   background-image:
     linear-gradient(rgba(255, 255, 255, .02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, .02) 1px, transparent 1px);
-
   background-size: 60px 60px;
-
   pointer-events: none;
-
 }
-
-
 
 .evolution .container {
   max-width: 1900px;
-
   margin: 0 auto;
-
   padding-inline: 3rem;
-
   position: relative;
-
   z-index: 2;
-
 }
 
-/* ==========================================
-   HEADER
-========================================== */
-
 .section-header {
-
   width: 100%;
   max-width: 760px;
-
   margin: 0 auto 5rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   text-align: center;
-
 }
 
 .chapter {
-
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   padding: .55rem 1.2rem;
-
   margin-bottom: 1.4rem;
-
   border-radius: 999px;
-
   background: rgba(0, 255, 136, .08);
-
   border: 1px solid rgba(0, 255, 136, .18);
-
   color: var(--primary-color);
-
   font-size: .82rem;
-
   font-weight: 700;
-
   letter-spacing: .12em;
-
   text-transform: uppercase;
-
 }
 
 .section-header h2 {
-
   max-width: 700px;
-
   margin-bottom: 1.5rem;
-
   font-size: clamp(2.7rem, 5vw, 4.2rem);
-
   line-height: 1.1;
-
   font-weight: 800;
-
   color: var(--white);
-
 }
 
 .section-description {
-
   max-width: 650px;
-
   margin: 0 auto;
-
   color: var(--gray-300);
-
   font-size: 1.08rem;
-
   line-height: 1.9;
-
 }
 
-/* ==========================================
-   COMMUNITY CARD
-========================================== */
-
 .community-card {
-
   position: relative;
-
   margin: 0 auto 5rem;
-
   padding: 4rem;
-
   border-radius: 32px;
-
   overflow: hidden;
-
   background: rgba(255, 255, 255, .03);
-
   border: 1px solid rgba(255, 255, 255, .08);
-
   box-shadow:
     0 30px 80px rgba(0, 0, 0, .45);
-
 }
 
 .community-card::before {
-
   content: "";
-
   position: absolute;
-
   width: 420px;
   height: 420px;
-
   border-radius: 50%;
-
   background: #00ff88;
-
   filter: blur(140px);
-
   opacity: .12;
-
   top: -200px;
   right: -140px;
-
 }
 
 .community-card>* {
-
   position: relative;
-
   z-index: 2;
-
 }
 
 .community-card h3 {
-
   max-width: 600px;
-
   margin-bottom: 1.2rem;
-
   font-size: 2rem;
-
   color: white;
-
 }
 
 .community-card p {
-
   max-width: 720px;
-
   margin-bottom: 2.5rem;
-
   color: var(--gray-300);
-
   line-height: 1.9;
-
 }
 
 .community-items {
-
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 1rem;
-
 }
 
 .item {
-
   padding: .9rem 1.5rem;
-
   border-radius: 999px;
-
   background: rgba(255, 255, 255, .05);
-
   border: 1px solid rgba(255, 255, 255, .08);
-
   color: white;
-
   font-weight: 600;
-
   transition: .35s;
-
 }
 
 .item:hover {
-
   transform: translateY(-5px);
-
   background: rgba(0, 255, 136, .10);
-
   border-color: rgba(0, 255, 136, .35);
-
 }
-
-/* ==========================================
-   MOSAICO
-========================================== */
 
 .evolution-grid {
-
   display: grid;
-
   grid-template-columns: 2fr 1fr;
-
   gap: 2rem;
-
   align-items: start;
-
 }
 
-/* ==========================================
-   EMPRESAS
-========================================== */
-
 .companies-area {
-
   padding: 2.5rem;
-
   border-radius: 28px;
-
   background: rgba(255, 255, 255, .03);
-
   border: 1px solid rgba(255, 255, 255, .08);
-
   box-shadow:
     0 25px 60px rgba(0, 0, 0, .35);
-
 }
 
 .companies-area h3 {
-
   margin-bottom: 2rem;
-
   font-size: 1.35rem;
-
   color: var(--white);
-
 }
 
 .companies-grid {
-
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 1rem;
-
 }
 
 .company-card {
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   height: 260px;
-
   border-radius: 20px;
-
   background: rgba(255, 255, 255, .04);
-
   border: 1px solid rgba(255, 255, 255, .06);
-
   transition:
     transform .35s,
     border-color .35s,
     background .35s,
     box-shadow .35s;
-
 }
 
 .company-card:hover {
-
   transform: translateY(-8px);
-
   background: rgba(0, 255, 136, .08);
-
   border-color: rgba(0, 255, 136, .35);
-
   box-shadow:
     0 15px 35px rgba(0, 255, 136, .10);
-
 }
 
 .company-card img {
-
   width: 100%;
-
   max-width: 190px;
-
   object-fit: contain;
-
   transition: transform .35s;
-
 }
 
 .company-card:hover img {
-
   transform: scale(1.08);
-
 }
 
-/* ==========================================
-   TRANSFORMAÇÃO
-========================================== */
-
 .transformation {
-
   display: flex;
-
   flex-direction: column;
-
   gap: 2rem;
-
 }
 
 .before,
 .after {
-
   padding: 2.2rem;
-
   border-radius: 28px;
-
   background: rgba(255, 255, 255, .03);
-
   border: 1px solid rgba(255, 255, 255, .08);
-
   transition:
     transform .35s,
     border-color .35s,
     box-shadow .35s;
-
 }
 
 .before:hover,
 .after:hover {
-
   transform: translateY(-6px);
-
   border-color: rgba(0, 255, 136, .35);
-
   box-shadow:
     0 20px 40px rgba(0, 255, 136, .08);
-
 }
 
 .before h3 {
-
   margin-bottom: 1.8rem;
-
   color: #ff6b6b;
-
   font-size: 1.35rem;
-
   letter-spacing: .05em;
-
 }
 
 .after h3 {
-
   margin-bottom: 1.8rem;
-
   color: #00ff88;
-
   font-size: 1.35rem;
-
   letter-spacing: .05em;
-
 }
 
 .before ul,
 .after ul {
-
   list-style: none;
-
   padding: 0;
-
   margin: 0;
-
 }
 
 .before li,
 .after li {
-
   display: flex;
-
   align-items: center;
-
   gap: .8rem;
-
   padding: .75rem 0;
-
   color: var(--gray-200);
-
   line-height: 1.6;
-
   border-bottom: 1px solid rgba(255, 255, 255, .05);
-
 }
 
 .before li:last-child,
 .after li:last-child {
-
   border: none;
-
 }
 
-/* ==========================================
-   FOOTER
-========================================== */
-
-.community-footer{
-
-    max-width:760px;
-
-    margin:7rem auto 0;
-
-    text-align:center;
-
+.community-footer {
+  max-width: 760px;
+  margin: 7rem auto 0;
+  text-align: center;
 }
 
-.community-footer h3{
-
-    margin-bottom:1.25rem;
-
-    font-size:2rem;
-
-    color:var(--white);
-
+.community-footer h3 {
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  color: var(--white);
 }
 
-.community-footer p{
-
-    color:var(--gray-300);
-
-    line-height:1.9;
-
-    font-size:1.05rem;
-
+.community-footer p {
+  color: var(--gray-300);
+  line-height: 1.9;
+  font-size: 1.05rem;
 }
 
-.community-footer::before{
-
-    content:"";
-
-    display:block;
-
-    width:120px;
-
-    height:2px;
-
-    margin:0 auto 2rem;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        var(--primary-color),
-        transparent
-    );
-
+.community-footer::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(90deg,
+      transparent,
+      var(--primary-color),
+      transparent);
 }
-
-/* ==========================================
-   HOVERS
-========================================== */
 
 .community-card,
 .companies-area,
 .before,
-.after{
-
-    transition:
-        transform .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease;
+.after {
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
 
 }
 
 .community-card:hover,
-.companies-area:hover{
-
-    transform:translateY(-6px);
-
-    border-color:rgba(0,255,136,.25);
-
-    box-shadow:
-        0 35px 70px rgba(0,0,0,.45);
-
+.companies-area:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 255, 136, .25);
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, .45);
 }
 
-/* ==========================================
-   TABLET
-========================================== */
+@media (max-width:992px) {
+  .evolution {
+    padding: 7rem 0;
+  }
 
-@media (max-width:992px){
+  .evolution-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .evolution{
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-        padding:7rem 0;
-
-    }
-
-    .evolution-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .companies-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .community-card{
-
-        padding:3rem;
-
-    }
-
+  .community-card {
+    padding: 3rem;
+  }
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+@media (max-width:768px) {
+  .evolution {
+    padding: 5rem 0;
+  }
 
-@media (max-width:768px){
+  .section-header {
+    margin-bottom: 4rem;
+  }
 
-    .evolution{
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
 
-        padding:5rem 0;
+  .section-description {
+    font-size: 1rem;
+  }
 
-    }
+  .community-card {
+    padding: 2rem;
+  }
 
-    .section-header{
+  .community-card h3 {
+    font-size: 1.5rem;
+  }
 
-        margin-bottom:4rem;
+  .community-items {
+    justify-content: center;
+  }
 
-    }
+  .companies-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: .8rem;
+  }
 
-    .section-header h2{
+  .company-card {
+    height: 80px;
+  }
 
-        font-size:2.2rem;
-
-    }
-
-    .section-description{
-
-        font-size:1rem;
-
-    }
-
-    .community-card{
-
-        padding:2rem;
-
-    }
-
-    .community-card h3{
-
-        font-size:1.5rem;
-
-    }
-
-    .community-items{
-
-        justify-content:center;
-
-    }
-
-    .companies-grid{
-
-        grid-template-columns:1fr 1fr;
-
-        gap:.8rem;
-
-    }
-
-    .company-card{
-
-        height:80px;
-
-    }
-
-    .before,
-    .after{
-
-        padding:1.5rem;
-
-    }
-
+  .before,
+  .after {
+    padding: 1.5rem;
+  }
 }

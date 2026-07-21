@@ -1,89 +1,54 @@
-/* ==========================================================
-   HERO
-========================================================== */
-
 .hero {
     position: relative;
     width: 100%;
     min-height: 100vh;
-
     display: flex;
     align-items: center;
-
     padding: 110px 20px 90px;
-
     background: var(--color-background);
-
     overflow: hidden;
     isolation: isolate;
 }
 
-/* Glow superior */
-
 .hero::before {
     content: "";
-
     position: absolute;
-
     top: -180px;
     right: -180px;
-
     width: 520px;
     height: 520px;
-
     border-radius: 50%;
-
     background: rgba(0, 232, 90, 0.10);
-
     filter: blur(130px);
-
     pointer-events: none;
     z-index: -1;
 }
 
-/* Glow inferior */
-
 .hero::after {
     content: "";
-
     position: absolute;
-
     bottom: -180px;
     left: -180px;
-
     width: 420px;
     height: 420px;
-
     border-radius: 50%;
-
     background: rgba(0, 232, 90, 0.05);
-
     filter: blur(150px);
-
     pointer-events: none;
     z-index: -1;
 }
 
 .hero__container {
     position: relative;
-
     width: 100%;
     max-width: var(--layout-max-width);
-
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 90px;
-
     z-index: 1;
 }
-
-/* ==========================================================
-   COLUNA ESQUERDA
-========================================================== */
 
 .hero__content {
     flex: 1;
@@ -96,23 +61,19 @@
 .hero__title {
     max-width: 640px;
     margin-bottom: 32px;
-
     font-size: clamp(3rem, 5vw, 4.2rem);
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -2px;
-
     color: var(--color-text);
 }
 
 .hero__description {
     max-width: 560px;
     margin-bottom: 48px;
-
     font-size: 1.125rem;
     line-height: 1.8;
     font-weight: 400;
-
     color: var(--color-text-secondary);
 }
 
@@ -123,51 +84,30 @@
     flex-wrap: wrap;
 }
 
-/* ==========================================================
-   MOCKUP
-========================================================== */
-
 .hero__mockup {
     position: relative;
-
     flex: 0 0 480px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     perspective: 1200px;
 }
 
-/* ==========================================================
-   DASHBOARD
-========================================================== */
-
 .hero__dashboard {
     position: relative;
-
     width: 100%;
     min-height: 500px;
-
     display: flex;
     flex-direction: column;
-
-    background: linear-gradient(
-        180deg,
-        rgba(38, 38, 38, 1) 0%,
-        var(--color-surface) 100%
-    );
-
+    background: linear-gradient(180deg,
+            rgba(38, 38, 38, 1) 0%,
+            var(--color-surface) 100%);
     border: 1px solid rgba(255, 255, 255, 0.06);
-
     border-radius: var(--radius-lg);
-
     overflow: hidden;
-
     box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.45),
         0 0 0 1px rgba(255, 255, 255, 0.03);
-
     transition:
         transform .35s ease,
         box-shadow .35s ease,
@@ -176,54 +116,36 @@
 
 .hero__dashboard::before {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
-    background: linear-gradient(
-        135deg,
-        rgba(0, 232, 90, 0.08),
-        transparent 35%
-    );
-
+    background: linear-gradient(135deg,
+            rgba(0, 232, 90, 0.08),
+            transparent 35%);
     pointer-events: none;
 }
 
 .hero__dashboard:hover {
     transform: translateY(-8px);
-
     border-color: rgba(0, 232, 90, 0.25);
-
     box-shadow:
         0 40px 90px rgba(0, 0, 0, 0.55),
         0 0 35px rgba(0, 232, 90, 0.10);
 }
 
-/* ==========================================================
-   BOTÕES
-========================================================== */
-
 .hero__button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-width: 210px;
     height: 56px;
-
     padding: 0 30px;
-
     border: 1px solid transparent;
     border-radius: var(--radius-md);
-
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     white-space: nowrap;
-
     cursor: pointer;
-
     transition:
         transform .30s ease,
         background .30s ease,
@@ -232,21 +154,15 @@
         box-shadow .30s ease;
 }
 
-/* ==========================================================
-   BOTÃO PRIMÁRIO
-========================================================== */
-
 .hero__button--primary {
     color: var(--color-background);
     background: var(--gradient-primary);
-
     box-shadow:
         0 10px 30px rgba(0, 232, 90, 0.18);
 }
 
 .hero__button--primary:hover {
     transform: translateY(-4px);
-
     box-shadow:
         0 18px 45px rgba(0, 232, 90, 0.28);
 }
@@ -255,25 +171,16 @@
     transform: translateY(-1px);
 }
 
-/* ==========================================================
-   BOTÃO SECUNDÁRIO
-========================================================== */
-
 .hero__button--secondary {
     color: var(--color-text);
-
     background: rgba(255, 255, 255, 0.02);
-
     border: 1px solid var(--color-border);
 }
 
 .hero__button--secondary:hover {
     transform: translateY(-4px);
-
     background: rgba(255, 255, 255, 0.05);
-
     border-color: var(--color-primary);
-
     box-shadow:
         0 15px 35px rgba(0, 232, 90, 0.08);
 }
@@ -282,101 +189,68 @@
     transform: translateY(-1px);
 }
 
-/* ==========================================================
-   HEADER
-========================================================== */
-
 .dashboard__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     min-height: 72px;
-
     padding: 0 32px;
-
     background: rgba(30, 30, 30, 0.95);
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .dashboard__brand {
     display: flex;
     align-items: center;
-
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: .4px;
-
     color: var(--color-text);
 }
 
 .dashboard__brand::before {
     content: "";
-
     width: 10px;
     height: 10px;
-
     margin-right: 10px;
-
     border-radius: 50%;
-
     background: var(--color-primary);
-
     box-shadow:
         0 0 10px rgba(0, 232, 90, 0.7),
         0 0 20px rgba(0, 232, 90, 0.35);
 }
 
-/* ==========================================================
-   CONTENT
-========================================================== */
-
 .dashboard__content {
     flex: 1;
-
     display: flex;
     flex-direction: column;
-
     padding: 48px 32px 40px;
-
-    background: linear-gradient(
-        180deg,
-        rgba(255,255,255,.01) 0%,
-        transparent 100%
-    );
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, .01) 0%,
+            transparent 100%);
 }
 
 .dashboard__label {
     display: inline-flex;
     align-items: center;
     align-self: flex-start;
-
     margin-bottom: 14px;
-
     padding: 6px 14px;
-
-    border: 1px solid rgba(0,232,90,.18);
+    border: 1px solid rgba(0, 232, 90, .18);
     border-radius: 999px;
-
-    background: rgba(0,232,90,.08);
-
+    background: rgba(0, 232, 90, .08);
     font-size: .75rem;
     font-weight: 600;
-
     color: var(--color-primary);
-
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .dashboard__title {
     margin: 0;
-
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.25;
-
     color: var(--color-text);
 }
 
@@ -386,61 +260,43 @@
 
 .dashboard__progress-number {
     display: block;
-
     margin-bottom: 18px;
-
     text-align: center;
-
     font-size: 3.6rem;
     font-weight: 800;
     line-height: 1;
-
     color: var(--color-primary);
 }
 
 .dashboard__progress-bar {
     width: 100%;
     height: 12px;
-
     border-radius: 999px;
-
-    background: rgba(255,255,255,.06);
-
+    background: rgba(255, 255, 255, .06);
     overflow: hidden;
 }
 
 .dashboard__progress-fill {
     position: relative;
-
     width: 72%;
     height: 100%;
-
     border-radius: inherit;
-
     background: var(--gradient-primary);
-
     overflow: hidden;
 }
 
 .dashboard__progress-fill::after {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.35),
-        transparent
-    );
-
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
     animation: progressShine 3s linear infinite;
 }
 
 @keyframes progressShine {
-
     from {
         transform: translateX(-100%);
     }
@@ -448,29 +304,17 @@
     to {
         transform: translateX(200%);
     }
-
 }
-
-
-/* ==========================================================
-   MÓDULO
-========================================================== */
 
 .dashboard__current-module {
     display: flex;
     flex-direction: column;
-
     gap: 10px;
-
     margin-top: auto;
-
     padding: 22px;
-
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 14px;
-
     background: rgba(255, 255, 255, 0.02);
-
     transition:
         border-color .30s ease,
         background .30s ease,
@@ -479,36 +323,26 @@
 
 .dashboard__current-module:hover {
     transform: translateY(-3px);
-
     border-color: rgba(0, 232, 90, 0.22);
-
     background: rgba(0, 232, 90, 0.04);
 }
 
 .dashboard__module-label {
     display: inline-flex;
     align-items: center;
-
     gap: 8px;
-
     font-size: .82rem;
     font-weight: 600;
-
     color: var(--color-text-secondary);
-
     letter-spacing: .4px;
 }
 
 .dashboard__module-label::before {
     content: "";
-
     width: 8px;
     height: 8px;
-
     border-radius: 50%;
-
     background: var(--color-primary);
-
     box-shadow: 0 0 10px rgba(0, 232, 90, .6);
 }
 
@@ -516,12 +350,171 @@
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.4;
-
     color: var(--color-text);
-
     transition: color .30s ease;
 }
 
 .dashboard__current-module:hover .dashboard__module-name {
     color: var(--color-primary);
+}
+
+@media (max-width: 1200px) {
+    .hero__container {
+        gap: 60px;
+    }
+
+    .hero__mockup {
+        flex: 0 0 420px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 120px 24px 80px;
+    }
+
+    .hero__container {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .hero__content {
+        max-width: 700px;
+        align-items: center;
+    }
+
+    .hero__title {
+        max-width: 100%;
+    }
+
+    .hero__description {
+        max-width: 100%;
+    }
+
+    .hero__buttons {
+        justify-content: center;
+    }
+
+    .hero__mockup {
+        width: 100%;
+        max-width: 500px;
+        flex: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 110px 20px 70px;
+    }
+
+    .hero__container {
+        gap: 50px;
+    }
+
+    .hero__title {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero__buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero__button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero__mockup {
+        max-width: 420px;
+    }
+
+    .dashboard__header {
+        padding: 0 24px;
+    }
+
+    .dashboard__content {
+        padding: 36px 24px;
+    }
+
+    .dashboard__title {
+        font-size: 1.7rem;
+    }
+
+    .dashboard__progress-number {
+        font-size: 3rem;
+    }
+
+    .dashboard__module-name {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 16px 60px;
+    }
+
+    .hero__title {
+        font-size: 2.2rem;
+        line-height: 1.15;
+    }
+
+    .hero__description {
+        font-size: .95rem;
+    }
+
+    .hero__button {
+        width: 100%;
+        height: 52px;
+        font-size: .95rem;
+    }
+
+    .hero__mockup {
+        max-width: 100%;
+    }
+
+    .hero__dashboard {
+        min-height: 430px;
+    }
+
+    .dashboard__header {
+        min-height: 60px;
+        padding: 0 18px;
+    }
+
+    .dashboard__content {
+        padding: 28px 18px;
+    }
+
+    .dashboard__label {
+        font-size: .7rem;
+    }
+
+    .dashboard__title {
+        font-size: 1.4rem;
+    }
+
+    .dashboard__progress-number {
+        font-size: 2.5rem;
+    }
+
+    .dashboard__current-module {
+        padding: 18px;
+    }
+
+    .dashboard__module-name {
+        font-size: 1.05rem;
+    }
 }
