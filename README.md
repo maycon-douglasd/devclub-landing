@@ -25,20 +25,17 @@ https://SEU-PROJETO-VERCEL.app
 
 ### Desktop
 
-> *(Adicione aqui um print da landing em desktop.)*
-
 <p align="center">
-<img src="./src/assets/images/preview-desktop.png" width="100%">
+<img src="./src/assets/images/desktop.png" alt="Versão Desktop" width="100%">
 </p>
 
 ---
 
 ### Mobile
 
-> *(Adicione aqui um print da versão mobile.)*
 
 <p align="center">
-<img src="./src/assets/images/preview-mobile.png" width="320">
+<img src="./src/assets/images/mobile.png" alt="Versão Mobile" width="320">
 </p>
 
 ---
