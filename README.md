@@ -17,7 +17,7 @@
 
 🔗 **Projeto Online**
 
-https://SEU-PROJETO-VERCEL.app
+devclub-landing-peach.vercel.app
 
 ---
 
@@ -172,14 +172,6 @@ Os principais objetivos foram:
 
 Desenvolvedor Front-end em constante evolução, apaixonado por tecnologia e criação de interfaces modernas.
 
-🔗 GitHub
-
-https://github.com/maycon-douglasd
-
-🔗 LinkedIn
-
-https://www.linkedin.com/in/maycon-douglas
-
 ---
 
 # ⭐ Gostou do projeto?
@@ -189,9 +181,3 @@ Se este projeto foi interessante para você, deixe uma ⭐ no repositório.
 Isso ajuda bastante e incentiva a criação de novos projetos.
 
 ---
-
-<p align="center">
-
-Desenvolvido com ❤️ por <strong>Maycon Douglas</strong>
-
-</p>
